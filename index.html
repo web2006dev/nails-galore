@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nails Galore | 5.0★ Soft Gel & Press-On Nail Studio Nagpur</title>
+  <meta name="description" content="Nails Galore in Sitabuldi, Nagpur. Perfect 5.0★ rating. Specializing in Soft Gel extensions, custom press-on nails, celestial nail decals, and trending nail art.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            plum: {
+              950: '#140c12',
+              900: '#1d121b',
+              800: '#2b1a27',
+              700: '#3f253a',
+            },
+            rosepetal: {
+              50: '#FCF7F9',
+              100: '#F7EDF2',
+              200: '#EFDCE6',
+              500: '#C078A6',
+              600: '#A65A8C',
+            },
+            gold: '#D4AF37',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-rosepetal-50 text-plum-950 antialiased selection:bg-rosepetal-200 selection:text-plum-900">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-plum-950 text-stone-200 text-xs py-2 px-4 border-b border-plum-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 font-bold text-[11px]">
+          <i data-lucide="star" class="w-3 h-3 fill-amber-300"></i>
+          Flawless 5.0 Rating (100% 5-Star Reviews)
+        </span>
+        <span class="hidden sm:inline text-stone-600">|</span>
+        <span class="hidden sm:inline text-stone-300">Rahul Bazar Complex, Sitabuldi, Nagpur</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <span class="text-stone-300">Mon – Sun: 10:30 AM – 8:00 PM</span>
+        <a href="tel:07972622695" class="hover:text-amber-300 font-bold text-white flex items-center gap-1 transition-colors">
+          <i data-lucide="phone" class="w-3 h-3 text-amber-400"></i>
+          079726 22695
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-rosepetal-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-plum-950 to-rosepetal-600 flex items-center justify-center text-amber-200 font-serif font-bold text-lg shadow-sm border border-rosepetal-200 group-hover:scale-105 transition-transform">
+          NG
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-plum-950 block leading-none">Nails Galore</span>
+          <span class="text-[9px] tracking-[0.22em] uppercase font-semibold text-rosepetal-600 block mt-1">5.0★ Nail Atelier • Sitabuldi, Nagpur</span>
+        </div>
+      </a>
+
+      <!-- Minimal Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-stone-700">
+        <a href="#visuals" class="hover:text-rosepetal-600 transition-colors">AI Art & Photos</a>
+        <a href="#menu" class="hover:text-rosepetal-600 transition-colors">Services & Sets</a>
+        <a href="#reviews" class="hover:text-rosepetal-600 transition-colors">5.0 Reviews</a>
+        <a href="#visit" class="hover:text-rosepetal-600 transition-colors">Studio Location</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/917972622695?text=Hello%20Nails%20Galore%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="px-4 py-2.5 rounded-full border border-stone-300 text-stone-700 text-xs uppercase tracking-wider font-bold hover:border-plum-950 hover:text-plum-950 transition-colors flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+          WhatsApp
+        </a>
+        <button onclick="openBookingDrawer()" class="px-5 py-2.5 rounded-full bg-plum-950 text-white text-xs uppercase tracking-wider font-bold hover:bg-plum-800 transition-all shadow-sm flex items-center gap-2">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-300"></i>
+          <span>Book Set</span>
+        </button>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-toggle" class="md:hidden p-2 text-plum-950" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-white border-b border-rosepetal-200 px-6 py-5 space-y-4 shadow-xl">
+      <a href="#visuals" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-plum-950 py-1">AI Art & Photo Gallery</a>
+      <a href="#menu" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-plum-950 py-1">Menu & Rates</a>
+      <a href="#reviews" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-plum-950 py-1">5.0 Star Reviews</a>
+      <a href="#visit" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-plum-950 py-1">Visit Sitabuldi Studio</a>
+      <div class="pt-3 border-t border-rosepetal-100 flex flex-col gap-2">
+        <button onclick="openBookingDrawer()" class="w-full py-3 rounded-xl bg-plum-950 text-white text-xs uppercase tracking-wider font-bold text-center">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Visual Hero Section (Photo-Dominant Layout) -->
+  <section class="pt-10 pb-16 md:pt-16 md:pb-20 border-b border-rosepetal-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Minimal Intro -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-rosepetal-200 text-xs font-bold shadow-sm mb-3">
+            <span class="flex text-amber-400">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            </span>
+            <span class="text-plum-950 font-bold">5.0 / 5.0</span>
+            <span class="text-stone-300">•</span>
+            <span class="text-stone-600">7 Google Reviews (100% 5-Star)</span>
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-plum-950 leading-tight">
+            Soft Gel & Press-On <span class="italic font-light text-rosepetal-600">Atelier.</span>
+          </h1>
+        </div>
+
+        <!-- Quick CTA & Review Highlight -->
+        <div class="bg-white p-4 rounded-2xl border border-rosepetal-200 shadow-sm max-w-sm">
+          <p class="text-xs italic text-stone-700">"Professionally made and ate!! 🤏🏻💅🏻 The quality, creativity and attention to detail are amazing."</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-[10px] uppercase font-bold text-rosepetal-600">Verified Client Review</span>
+            <button onclick="openBookingDrawer()" class="text-xs font-bold text-plum-950 hover:underline">Book Set →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 High-Resolution AI Featured Photo Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- AI Photo 1: Soft Gel Pearl Sculpt -->
+        <div class="ai-photo-card h-96 group" data-category="softgel" data-title="Glazed Pearl Soft Gel" data-meta="Almond Shape • Iridescent Glaze" data-price="₹1,599">
+          <img src="images/hero_soft_gel.jpg" alt="Glazed Pearl Soft Gel Nails">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <span class="ai-badge absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+            AI Photo
+          </span>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold text-rosepetal-200 tracking-wider">Soft Gel</span>
+            <h3 class="font-serif text-xl font-bold">Glazed Pearl Sculpt</h3>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,599 • 60 mins</span>
+              <span class="card-action-trigger text-amber-300 font-bold hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Glazed Pearl Sculpt')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Photo 2: Luxury Press-On Set -->
+        <div class="ai-photo-card h-96 group" data-category="pressons" data-title="Aurelia Couture Press-On Set" data-meta="Reusable Set • Chrome French Tips" data-price="₹1,299">
+          <img src="images/press_on_set.jpg" alt="Luxury Press-On Nails Set">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <span class="ai-badge absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+            AI Photo
+          </span>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold text-rosepetal-200 tracking-wider">Press-On Nails</span>
+            <h3 class="font-serif text-xl font-bold">Couture Press-On Box</h3>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,299 • Reusable</span>
+              <span class="card-action-trigger text-amber-300 font-bold hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Couture Press-On Box')">Order →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Photo 3: Celestial Starburst Decals -->
+        <div class="ai-photo-card h-96 group" data-category="decals" data-title="Celestial Chrome & Gold Decals" data-meta="Lavender Chrome • Star Decals" data-price="₹1,499">
+          <img src="images/decals_chrome.jpg" alt="Celestial Starburst Nail Decals">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <span class="ai-badge absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+            AI Photo
+          </span>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold text-rosepetal-200 tracking-wider">Nail Decals</span>
+            <h3 class="font-serif text-xl font-bold">Celestial Starburst</h3>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,499 • High Gloss</span>
+              <span class="card-action-trigger text-amber-300 font-bold hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Celestial Starburst')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Photo 4: French Ombre Soft Gel -->
+        <div class="ai-photo-card h-96 group" data-category="softgel" data-title="Milky French Ombré Soft Gel" data-meta="Natural Almond • High Gloss" data-price="₹1,699">
+          <img src="images/french_ombre.jpg" alt="Milky French Ombre Soft Gel Nails">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <span class="ai-badge absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+            AI Photo
+          </span>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold text-rosepetal-200 tracking-wider">Soft Gel</span>
+            <h3 class="font-serif text-xl font-bold">Milky French Ombré</h3>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,699 • 65 mins</span>
+              <span class="card-action-trigger text-amber-300 font-bold hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Milky French Ombré')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Complete Visual Lookbook (High-Density Photo Gallery) -->
+  <section id="visuals" class="py-16 md:py-24 bg-white border-b border-rosepetal-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-rosepetal-600 block mb-1">Visual Atelier</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-plum-950">Lookbook & Sets</h2>
+          <p class="text-xs text-stone-500 mt-1">Tap any photo to inspect high-resolution details.</p>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="flex flex-wrap gap-2 text-xs">
+          <button class="tab-filter active px-4 py-2 rounded-full font-bold uppercase tracking-wider text-[11px]" data-category="all">All Photos</button>
+          <button class="tab-filter px-4 py-2 rounded-full bg-stone-200/60 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="softgel">Soft Gel</button>
+          <button class="tab-filter px-4 py-2 rounded-full bg-stone-200/60 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="pressons">Press-On Nails</button>
+          <button class="tab-filter px-4 py-2 rounded-full bg-stone-200/60 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="decals">Nail Decals</button>
+          <button class="tab-filter px-4 py-2 rounded-full bg-stone-200/60 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="chrome">Chrome Finish</button>
+        </div>
+      </div>
+
+      <!-- High Density Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <div class="ai-photo-card h-80" data-category="softgel" data-title="Glazed Pearl Soft Gel" data-meta="Almond • AI Photo" data-price="₹1,599">
+          <img src="images/hero_soft_gel.jpg" alt="Glazed Pearl Soft Gel">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Soft Gel</span>
+            <h4 class="font-serif text-lg font-bold">Glazed Pearl Almond</h4>
+            <span class="text-xs text-stone-300">₹1,599</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="pressons" data-title="Couture Chrome Press-Ons" data-meta="Custom Reusable Set • AI Photo" data-price="₹1,299">
+          <img src="images/press_on_set.jpg" alt="Press On Nails">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Press-Ons</span>
+            <h4 class="font-serif text-lg font-bold">Chrome Floral Tips</h4>
+            <span class="text-xs text-stone-300">₹1,299</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="decals" data-title="Celestial Chrome Decals" data-meta="Gold Stars • AI Photo" data-price="₹1,499">
+          <img src="images/decals_chrome.jpg" alt="Celestial Starburst Decals">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Nail Decals</span>
+            <h4 class="font-serif text-lg font-bold">Celestial Starburst</h4>
+            <span class="text-xs text-stone-300">₹1,499</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="softgel" data-title="Milky French Ombré" data-meta="Natural Base • AI Photo" data-price="₹1,699">
+          <img src="images/french_ombre.jpg" alt="French Ombre">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">French Ombré</span>
+            <h4 class="font-serif text-lg font-bold">Milky French Fade</h4>
+            <span class="text-xs text-stone-300">₹1,699</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="chrome" data-title="Liquid Silver Mirror Chrome" data-meta="Square Shape • Gel Polish" data-price="₹1,799">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=650&q=80" alt="Liquid Silver Chrome">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Chrome</span>
+            <h4 class="font-serif text-lg font-bold">Liquid Mirror Silver</h4>
+            <span class="text-xs text-stone-300">₹1,799</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="decals" data-title="Hand-Painted Floral Nail Art" data-meta="Almond Shape • Custom Decals" data-price="₹1,499">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=650&q=80" alt="Floral Nail Art">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Decals & Art</span>
+            <h4 class="font-serif text-lg font-bold">Botanical Foil Decal</h4>
+            <span class="text-xs text-stone-300">₹1,499</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="pressons" data-title="Velvet Cat-Eye Press-On Set" data-meta="Coffin Shape • Reusable" data-price="₹1,399">
+          <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=650&q=80" alt="Cat Eye Velvet Press Ons">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Press-Ons</span>
+            <h4 class="font-serif text-lg font-bold">Velvet Cat-Eye Set</h4>
+            <span class="text-xs text-stone-300">₹1,399</span>
+          </div>
+        </div>
+
+        <div class="ai-photo-card h-80" data-category="softgel" data-title="Clean Sheer Nude Overlay" data-meta="Natural Length • High Shine" data-price="₹999">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=650&q=80" alt="Clean Nude Overlay">
+          <div class="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-amber-300">Care</span>
+            <h4 class="font-serif text-lg font-bold">Sheer Nude Overlay</h4>
+            <span class="text-xs text-stone-300">₹999</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Essential Services Menu (Concise & Minimal) -->
+  <section id="menu" class="py-16 md:py-24 bg-rosepetal-50 border-b border-rosepetal-200 scroll-mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-lg mx-auto mb-10">
+        <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-rosepetal-600 block mb-1">Transparent Menu</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-plum-950">Services & Rates</h2>
+        <p class="text-xs text-stone-500 mt-1">All services include precision cuticle care and dry Russian prep.</p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-rosepetal-200 shadow-sm divide-y divide-rosepetal-100">
+        
+        <div class="py-3.5 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-plum-950 text-sm">Soft Gel Extensions (Full Set)</h4>
+            <p class="text-xs text-stone-500">Zero-damage full cover tips • Lightweight • 60 mins</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-plum-950 text-sm">₹1,599</span>
+            <button onclick="openBookingDrawer('Soft Gel Extensions (Full Set)')" class="px-4 py-2 rounded-full bg-plum-950 text-white text-xs font-bold hover:bg-plum-800 transition-colors">
+              Book
+            </button>
+          </div>
+        </div>
+
+        <div class="py-3.5 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-plum-950 text-sm">Custom Reusable Press-On Set</h4>
+            <p class="text-xs text-stone-500">Hand-painted custom sized set with glue & tabs kit • Reusable</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-plum-950 text-sm">₹1,299</span>
+            <button onclick="openBookingDrawer('Custom Reusable Press-On Set')" class="px-4 py-2 rounded-full bg-plum-950 text-white text-xs font-bold hover:bg-plum-800 transition-colors">
+              Order
+            </button>
+          </div>
+        </div>
+
+        <div class="py-3.5 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-plum-950 text-sm">Nail Decals & Celestial Art</h4>
+            <p class="text-xs text-stone-500">Gold foils, celestial starbursts, floral stickers & sealing • 25 mins</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-plum-950 text-sm">₹399+</span>
+            <button onclick="openBookingDrawer('Nail Decals and Celestial Art')" class="px-4 py-2 rounded-full bg-plum-950 text-white text-xs font-bold hover:bg-plum-800 transition-colors">
+              Book
+            </button>
+          </div>
+        </div>
+
+        <div class="py-3.5 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-plum-950 text-sm">Nail Polish Change & Filing</h4>
+            <p class="text-xs text-stone-500">Shaping, buffing, cuticle oil & premium polish change • 20 mins</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-plum-950 text-sm">₹349</span>
+            <button onclick="openBookingDrawer('Nail Polish Change and Filing')" class="px-4 py-2 rounded-full bg-plum-950 text-white text-xs font-bold hover:bg-plum-800 transition-colors">
+              Book
+            </button>
+          </div>
+        </div>
+
+        <div class="py-3.5 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-plum-950 text-sm">Quick Nail Repair & Re-Fix</h4>
+            <p class="text-xs text-stone-500">Fix detached tip, crack repair or broken nail structure • 15 mins</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-plum-950 text-sm">₹199</span>
+            <button onclick="openBookingDrawer('Quick Nail Repair and Re-Fix')" class="px-4 py-2 rounded-full bg-plum-950 text-white text-xs font-bold hover:bg-plum-800 transition-colors">
+              Book
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5.0 Google Review Section -->
+  <section id="reviews" class="py-16 md:py-24 bg-white border-b border-rosepetal-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-rosepetal-600 block mb-1">Customer Reviews</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-plum-950">Flawless 5.0 Rating</h2>
+        <div class="flex justify-center text-amber-400 mt-2 gap-1">
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-rosepetal-50 p-6 rounded-2xl border border-rosepetal-200">
+          <div class="flex text-amber-400 mb-3">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="text-stone-800 text-xs italic leading-relaxed mb-4">
+            "The quality, creativity, and attention to detail are amazing."
+          </p>
+          <div class="text-[11px] font-bold text-plum-950">Verified Google Review</div>
+        </div>
+
+        <div class="bg-rosepetal-50 p-6 rounded-2xl border border-rosepetal-200">
+          <div class="flex text-amber-400 mb-3">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="text-stone-800 text-xs italic leading-relaxed mb-4">
+            "The team is professional, and my nail polish change looks perfect."
+          </p>
+          <div class="text-[11px] font-bold text-plum-950">Verified Google Review</div>
+        </div>
+
+        <div class="bg-rosepetal-50 p-6 rounded-2xl border border-rosepetal-200">
+          <div class="flex text-amber-400 mb-3">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="text-stone-800 text-xs italic leading-relaxed mb-4">
+            "Professionally made and ate!! 🤏🏻💅🏻"
+          </p>
+          <div class="text-[11px] font-bold text-plum-950">Verified Google Review</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Visit Section -->
+  <section id="visit" class="py-16 md:py-24 bg-rosepetal-50 border-b border-rosepetal-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-rosepetal-600 block mb-1">Find Us</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-plum-950">Sitabuldi Studio</h2>
+            <p class="text-xs text-stone-500 mt-1">Centrally situated inside Rahul Bazar Complex.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-rosepetal-200 space-y-4 text-xs text-stone-700">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-rosepetal-600 shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-plum-950">Address</p>
+                <p class="text-stone-600 leading-relaxed mt-0.5">
+                  2nd Floor, Iconic academy, RAHUL BAZAR COMPLEX, Shop no sf 13, Sitabuldi, Nagpur, Maharashtra 440013
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-rosepetal-600 shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-plum-950">Direct Studio Phone</p>
+                <a href="tel:07972622695" class="text-stone-700 hover:text-plum-950 font-semibold underline mt-0.5 block">
+                  079726 22695
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-4 h-4 text-rosepetal-600 shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-plum-950">Timings</p>
+                <p class="text-stone-600 mt-0.5">Monday – Sunday: 10:30 AM – 8:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="https://maps.google.com/maps?q=Nails+galore+Rahul+Bazar+Complex+Sitabuldi+Nagpur" target="_blank" class="px-6 py-3 rounded-full bg-plum-950 text-white text-xs uppercase tracking-wider font-bold hover:bg-plum-800 transition-colors flex items-center gap-2 shadow">
+              <i data-lucide="navigation" class="w-3.5 h-3.5 text-amber-300"></i>
+              <span>Get Directions</span>
+            </a>
+            <a href="tel:07972622695" class="px-5 py-3 rounded-full border border-stone-300 text-plum-950 text-xs uppercase tracking-wider font-bold hover:border-plum-950 transition-colors">
+              Call Now
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border border-rosepetal-200 shadow-md">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.4398188289417!2d79.0833!3d21.1466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1c37e5586bd%3A0xac0ab2f3566ea2da!2sRahul%20Bazar%20Complex%2C%20Sitabuldi%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="380" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              class="w-full h-[380px]"
+              title="Nails Galore Location Map">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="bg-plum-950 text-stone-400 py-10 border-t border-plum-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-serif font-bold text-white text-base">Nails Galore</span>
+        <span class="text-stone-600">·</span>
+        <span class="text-stone-400 text-[11px]">Rahul Bazar Complex, Sitabuldi, Nagpur (5.0★)</span>
+      </div>
+      <p class="text-[11px] text-stone-500">© 2026 Nails Galore. Soft Gel & Custom Press-On Nails.</p>
+    </div>
+  </footer>
+
+  <!-- Fixed Mobile Action Bar -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-rosepetal-200 px-4 py-2.5 shadow-2xl flex items-center justify-between gap-2">
+    <a href="tel:07972622695" class="flex-1 py-2.5 rounded-xl bg-stone-100 text-plum-950 font-bold text-xs flex items-center justify-center gap-1.5">
+      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+      Call
+    </a>
+    <a href="https://wa.me/917972622695?text=Hi%20Nails%20Galore%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="flex-1 py-2.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold text-xs flex items-center justify-center gap-1.5">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+      WhatsApp
+    </a>
+    <button onclick="openBookingDrawer()" class="flex-1 py-2.5 rounded-xl bg-plum-950 text-amber-300 font-bold text-xs flex items-center justify-center gap-1.5 shadow">
+      <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+      Book Slot
+    </button>
+  </div>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div id="image-lightbox" class="lightbox-modal fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 lightbox-hidden">
+    <div class="lightbox-content bg-plum-950 text-white w-full max-w-2xl rounded-3xl overflow-hidden border border-plum-800 shadow-2xl relative">
+      <button id="close-lightbox" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-plum-900/80 text-white flex items-center justify-center hover:bg-plum-800 transition-colors" aria-label="Close">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="h-96 sm:h-[450px] overflow-hidden bg-black flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="High-Res Nail Set" class="w-full h-full object-cover">
+      </div>
+
+      <div class="p-6 bg-plum-900 flex items-center justify-between">
+        <div>
+          <span id="lightbox-meta" class="text-[10px] uppercase font-bold text-rosepetal-200 tracking-widest block">Soft Gel</span>
+          <h3 id="lightbox-title" class="font-serif text-2xl font-normal">Glazed Pearl Sculpt</h3>
+          <span id="lightbox-price" class="text-sm text-stone-300 font-bold">₹1,599</span>
+        </div>
+        <button id="lightbox-action-btn" class="px-6 py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-plum-950 font-bold text-xs uppercase tracking-wider transition-colors shadow">
+          Book This Set
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fast Booking & Press-On Drawer -->
+  <div id="booking-drawer" class="lightbox-modal fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 lightbox-hidden">
+    <div class="lightbox-content bg-white w-full max-w-md rounded-3xl shadow-2xl border border-rosepetal-200 overflow-hidden">
+      
+      <div class="p-5 bg-rosepetal-100 border-b border-rosepetal-200 flex items-center justify-between">
+        <div>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-rosepetal-600 block">Nails Galore • Sitabuldi</span>
+          <h3 class="font-serif text-2xl font-normal text-plum-950">Book Your Set</h3>
+        </div>
+        <button id="close-booking-drawer" class="p-1 rounded-full hover:bg-stone-200 text-stone-600 transition-colors" aria-label="Close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="drawer-form-box" class="p-6 space-y-4">
+        <form id="booking-form" class="space-y-4">
+          
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Select Set or Service</label>
+            <select id="booking-service-select" class="w-full px-3 py-2.5 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-plum-950">
+              <option value="Soft Gel Extensions (Full Set)">Soft Gel Extensions Full Set (₹1,599)</option>
+              <option value="Custom Reusable Press-On Set">Custom Reusable Press-On Set (₹1,299)</option>
+              <option value="Nail Decals & Celestial Art">Nail Decals & Celestial Art (₹399+)</option>
+              <option value="Nail Polish Change & Filing">Nail Polish Change & Filing (₹349)</option>
+              <option value="Quick Nail Repair & Re-Fix">Quick Nail Repair & Re-Fix (₹199)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Nail Shape Preference</label>
+            <div class="grid grid-cols-4 gap-2 text-center text-xs">
+              <button type="button" class="shape-pill py-2 rounded-xl border border-stone-300 bg-white font-medium" data-shape="Natural">Natural</button>
+              <button type="button" class="shape-pill py-2 rounded-xl border border-stone-300 bg-white font-medium" data-shape="Square">Square</button>
+              <button type="button" class="shape-pill py-2 rounded-xl border-stone-900 bg-stone-900 text-white font-medium" data-shape="Almond">Almond</button>
+              <button type="button" class="shape-pill py-2 rounded-xl border border-stone-300 bg-white font-medium" data-shape="Coffin">Coffin</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Date</label>
+              <input type="date" id="booking-date-input" required class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-plum-950">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Preferred Time</label>
+              <select id="booking-time" class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-plum-950">
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="03:30 PM" selected>03:30 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Name</label>
+              <input type="text" id="client-name" placeholder="Your Name" required class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-plum-950">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Phone</label>
+              <input type="tel" id="client-phone" placeholder="Phone Number" required class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-plum-950">
+            </div>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-2xl bg-plum-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-plum-800 transition-colors shadow flex items-center justify-center gap-2">
+            <span>Send Request on WhatsApp</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-amber-300"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Confirmation Screen -->
+      <div id="drawer-confirm-box" class="hidden p-6 text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+          <i data-lucide="check" class="w-6 h-6"></i>
+        </div>
+        <h4 class="font-serif text-2xl font-normal text-plum-950">Booking Sent!</h4>
+        <p class="text-xs text-stone-500">Your reservation details have been dispatched to Nails Galore WhatsApp.</p>
+        
+        <div id="drawer-summary-content" class="my-2"></div>
+
+        <div class="flex gap-2">
+          <a id="btn-confirm-wa" href="#" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Open WhatsApp
+          </a>
+          <button onclick="closeBookingDrawer(); resetBookingDrawer();" class="flex-1 py-3 rounded-xl bg-stone-100 text-stone-800 font-bold text-xs">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
